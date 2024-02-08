@@ -16,8 +16,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     private ImageView bottolImageView;
-    private TextView bottolTextView, result;
-    private Random bottolRandomNumber = new Random();
+    private final Random bottolRandomNumber = new Random();
     private int lastDirection;
 
     @SuppressLint("MissingInflatedId")
@@ -27,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         bottolImageView = findViewById(R.id.bottolImageViewId);
-        bottolTextView = findViewById(R.id.bottolTextViewId);
-        result = findViewById(R.id.resultId);
+        TextView bottolTextView = findViewById(R.id.bottolTextViewId);
+        TextView result = findViewById(R.id.resultId);
 
         final Button bottolButton = findViewById(R.id.bottolButtonId);
 
